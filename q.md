@@ -1371,29 +1371,82 @@ line(x2,y2,'Parent',ax2,'Color','k')
 
 1. **Explain lead and lag compensators.**
 
+A lead compensator can increase the stability or speed of reponse of a system; a lag compensator can reduce (but not eliminate) the steady-state error. Depending on the effect desired, one or more lead and lag compensators may be used in various combinations.
+
 * **Linearize the system.**
 
 * **Find the Transfer function from the state space equation.**
 
+https://lpsa.swarthmore.edu/Representations/SysRepTransformations/TF2SS.html#Transfer_Function
+
 * **Given x1 and x2 dot, find the Lyapunov equation.**
+
+https://www.egr.msu.edu/~khalil/NonlinearSystems/Sample/Lect_9.pdf
 
 ####[[↑]](#toc) <a name='os'>Operating System Questions:</a>
 
 1. **What is RTOS?**
 
+A real-time operating system is an operating system for real-time applications that processes data and events that have critically defined time constraints.
+
 * **Soft vs Hard RTOS?**
+
+Hard real-time systems have a strict time limit, or we can say deadlines. It is important to meet those deadlines, otherwise, the system is considered a system failure. In a soft real-time system, there is no mandatory requirement of completing the deadline for every task.
 
 * **Scheduling? Examples of scheduling?**
 
+In typical designs, a task has three states:
+
+Running (executing on the CPU);
+
+Ready (ready to be executed);
+
+Blocked (waiting for an event, I/O for example).
+Most tasks are blocked or ready most of the time because generally only one task can run at a time per CPU. The number of items in the ready queue can vary greatly, depending on the number of tasks the system needs to perform and the type of scheduler that the system uses. On simpler non-preemptive but still multitasking systems, a task has to give up its time on the CPU to other tasks, which can cause the ready queue to have a greater number of overall tasks in the ready to be executed state (resource starvation).
+
+Usually, the data structure of the ready list in the scheduler is designed to minimize the worst-case length of time spent in the scheduler's critical section, during which preemption is inhibited, and, in some cases, all interrupts are disabled, but the choice of data structure depends also on the maximum number of tasks that can be on the ready list.
+
+If there are never more than a few tasks on the ready list, then a doubly linked list of ready tasks is likely optimal. If the ready list usually contains only a few tasks but occasionally contains more, then the list should be sorted by priority. That way, finding the highest priority task to run does not require iterating through the entire list. Inserting a task then requires walking the ready list until reaching either the end of the list, or a task of lower priority than that of the task being inserted.
+
+Care must be taken not to inhibit preemption during this search. Longer critical sections should be divided into small pieces. If an interrupt occurs that makes a high priority task ready during the insertion of a low priority task, that high priority task can be inserted and run immediately before the low priority task is inserted.
+
+The critical response time, sometimes called the flyback time, is the time it takes to queue a new ready task and restore the state of the highest priority task to running. In a well-designed RTOS, readying a new task will take 3 to 20 instructions per ready-queue entry, and restoration of the highest-priority ready task will take 5 to 30 instructions.
+
+In more advanced systems, real-time tasks share computing resources with many non-real-time tasks, and the ready list can be arbitrarily long. In such systems, a scheduler ready list implemented as a linked list would be inadequate.
+
+Algorithms
+Some commonly used RTOS scheduling algorithms are:
+
+Cooperative scheduling
+
+Preemptive scheduling
+
+Rate-monotonic scheduling
+
+Round-robin scheduling
+
+Fixed priority pre-emptive scheduling, an implementation of preemptive time slicing
+
+
 * **Priority inversion?**
+
+Priority inversion is a bug that occurs when a high priority task is indirectly preempted by a low priority task.
 
 * **Embedded communication method examples?**
 
+Examples of the real-time operating systems: Airline traffic control systems, Command Control Systems, Airlines reservation system, Heart Pacemaker, Network Multimedia Systems, Robot etc
+
 * **What are presses?**
+
+idk
 
 * **What is the difference between process and thread?**
 
+The most significant difference between a process and a thread is that a process is defined as a task that is being completed by the computer, whereas a thread is a lightweight process that can be managed independently by a scheduler
+
 * **What is virtual memory?**
+
+Virtual memory is a memory management technique where secondary memory can be used as if it were a part of the main memory.
 
 ####[[↑]](#toc) <a name='signalprocessing'>Digital Signal Processing Questions:</a>
 
