@@ -1464,44 +1464,87 @@ Virtual memory is a memory management technique where secondary memory can be us
 
 * **h[n] = [1, 2, 3, 4, 5] i/p frequency = 100HZ, system is LTI. What is the o/p frequency?**
 
+idk
+
 * **Same i/p frequency, now h[n] = [1, 4, 9, 16, 25]. What is the o/p frequency?**
+
+idk
 
 * **What is the relationship between bandwidth and time duration?**
 
+These two parameters have a reciprocal relationship, so that an increase in the system's rise time corresponds to a decrease in the system's bandwidth. When some of the frequencies in the input signal exceed the system's bandwidth, the system attenuates these higher frequencies.
+
 * **Given a signal spectrum that is valid in range of -pi/2 to pi/2. What is the range of frequency when the signal is oversampled by a factor of 4?**
+
+idk
 
 * **What is the relationship between Discrete Fourier Transform and Z-Transform?**
 
+https://www.brainkart.com/article/Relationship-Between-Fourier-Transform-and-Z-Transform_13019/
+
 * **y[n] = x[n^2]. y(n) = x(n^3). System Stable? Casual? Linear?**
+
+idk
 
 * **Impulse response h[n] = 9*n*u(n), system stable?**
 
+idk
+
 * **h[n] = [4, 0, 1, 0, 2], arrow on second element, casual?**
 
+idk
+
 * **What is convolution? Difference between convolution and correlation?**
+
+Correlation is measurement of the similarity between two signals/sequences. Convolution is measurement of effect of one signal on the other signal.
 
 * **Difference between DFT and DTFT? Which one is suitable for computers?**
 
 * **Difference between DFT and FFT?**
 
+Discrete Fourier Transform (DFT) is the discrete version of the Fourier Transform (FT) that transforms a signal (or discrete sequence) from the time domain representation to its representation in the frequency domain. Whereas, Fast Fourier Transform (FFT) is any efficient algorithm for calculating the DFT.
+
 * **Aliasing, given an example of wheel with pokes.**
+
+https://mriquestions.com/aliasing.html
 
 * **Connection between DTFT and Z-Transform, the expect z = e^(jw)**
 
+https://www.projectrhea.org/rhea/index.php/Relationship_between_DTFT_%26_Z-Transform_-_Howard_Ho
+
 * **ROC of Z-Transform.**
+
+The ROC of the Z-transform is a ring or disc in the z-plane centred at the origin. The ROC of the Z-transform cannot contain any poles. The ROC of Z-transform of an LTI stable system contains the unit circle. The ROC of Z-transform must be connected region.
 
 * **Determine if a system is time-invariant or invariant.**
 
+A system is said to be time invariant if the response of the system to an input is not a function of time. On the other hand a system is time variant if the response to an input alters with time i.e. the system has varying response to the same input at different instants of time.
+
 * **Given x(n) and y(n), determine if it's FFR or IIR.**
+
+https://dsp.stackexchange.com/questions/44339/determine-whether-the-system-is-a-fir-or-iir-by-looking-the-transfer-function
 
 * **Stable system, casual system.**
 
+https://wiki.seg.org/wiki/Causality_and_stability_of_digital_systems
+
 * **What is f0 in Nequist Theory?**
+
+The Nyquist frequency is defined as 2*(freq. of original signal). In the case above, this would be 120 Hz sampling for a signal of 60 Hz. In the equation here, f_{0} is the highest frequency in the analog signal.
 
 * **What is continuous time system? What is Discrete time system? How do you convert one to the other**
 
+A continuous-time signal has values for all points in time in some (possibly infinite) interval. A discrete time signal has values for only discrete points in time
+
+https://www.mathworks.com/help/ident/ref/lti.c2d.html
+
 * **What is an LTI system? What is causality?**
 
+An LTI system is called causal if the output signal value at any time t depends only on input signal values for times less than t.
+A discrete-time LTI system is causal if the current value of the output depends on only the current value and past values of the input.
+
 * **What are random processes?**
+
+n probability theory and related fields, a stochastic or random process is a mathematical object usually defined as a family of random variables.
 
 * **What is PSD? What does PSD of white noise look like?**
