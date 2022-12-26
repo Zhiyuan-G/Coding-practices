@@ -18,12 +18,13 @@ MathWorks Interview Questions
 
 1. **What is autocorrelation?**
 
-* **What is PSD and what is its relationship with autocorrelation?**
-The distribution of average power of a signal in the frequency domain is called the power spectral density (PSD) or power density (PD) or power density spectrum. \\
-The power spectral density function S(ω)and the autocorrelation function R(τ) of a power signal form a Fourier transform pair. \\
+* **What is PSD and what is its relationship with autocorrelation?** \\
+The distribution of average power of a signal in the frequency domain is called the power spectral density (PSD) or power density (PD) or power density spectrum.
+The power spectral density function S(ω)and the autocorrelation function R(τ) of a power signal form a Fourier transform pair.
 
-* **Given a graph, how many edges are possible for both directed and undirected graph.**
-direct: n(n-1) \\
+* **Given a graph, how many edges are possible for both directed and undirected graph.** \\
+direct: n(n-1)
+
 undirected: n(n-1)/2
 
 * **Plot the derivative of the function.**
@@ -42,7 +43,7 @@ undirected: n(n-1)/2
 
 * **Find the orthogonal vector to A = i + 2j + k; B = j + 2k**
 
-A: -4i + j + 2k B: -2j + k 
+A: -4i + j + 2k B: -2j + k
 * **Find the acceleration from velocity.**
 
 	```
