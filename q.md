@@ -18,11 +18,13 @@ MathWorks Interview Questions
 
 1. **What is autocorrelation?**
 
-* **What is PSD and what is its relationship with autocorrelation?** \\
+* **What is PSD and what is its relationship with autocorrelation?**
+
 The distribution of average power of a signal in the frequency domain is called the power spectral density (PSD) or power density (PD) or power density spectrum.
 The power spectral density function S(ω)and the autocorrelation function R(τ) of a power signal form a Fourier transform pair.
 
-* **Given a graph, how many edges are possible for both directed and undirected graph.** \\
+* **Given a graph, how many edges are possible for both directed and undirected graph.**
+
 direct: n(n-1)
 
 undirected: n(n-1)/2
@@ -282,6 +284,7 @@ A: -4i + j + 2k B: -2j + k
 
 * **a = i + 3j - 4k, b = 1 - 2j + 3k, the mapping of b on a?**
 
+a*b/|b|
 * **Integral of x*cos(x) over x?**
 
 	```
@@ -303,7 +306,11 @@ A: -4i + j + 2k B: -2j + k
 
 * **Find observability of a given state space system.**
 
+A system is said to be observable if, for every possible evolution of state and control vectors, the current state can be estimated using only the information from outputs (physically, this generally corresponds to information obtained by sensors).
+
 * **What is asymptotic stability?**
+
+An equilibrium point is said to be asymptotically stable if for some initial value close to the equilibrium point, the solution will converge to the equilibrium point.
 
 * **What is the maximum area of the rectangle that can be drawn under the curve y = 12 - x^2.**
 
@@ -323,11 +330,15 @@ A: -4i + j + 2k B: -2j + k
 	Max area = 4(8) = 32
 	```
 
-* **Draw the differential of a given curve.**
+* **Draw the differential of a given curve.** idk
 
-* **How does 2nd order response look like when zeta is 1? How does critically damped response look like?**
+* **How does 2nd order response look like when zeta is 1? How does critically damped response look like?** idk oscillating system
 
 * **How do you find the gain and phase margins from a Bode plot?**
+
+We can usually read the gain margin directly from the Bode plot (as shown in the diagram above). This is done by calculating the vertical distance between the magnitude curve (on the Bode magnitude plot) and the x-axis at the frequency where the Bode phase plot = 180°. This point is known as the phase crossover frequency.
+
+We can usually read the phase margin directly from the Bode plot (as shown in the diagram above). This is done by calculating the vertical distance between the phase curve (on the Bode phase plot) and the x-axis at the frequency where the Bode magnitude plot = 0 dB. This point is known as the gain crossover frequency.
 
 ####[[↑]](#toc) <a name='concepts'>Programming Concepts Questions:</a>
 
